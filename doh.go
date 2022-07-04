@@ -26,10 +26,10 @@ import (
 	"time"
 
 	"github.com/ideatocode/doh-go/dns"
-	"github.com/likexian/doh-go/provider/cloudflare"
-	"github.com/likexian/doh-go/provider/dnspod"
-	"github.com/likexian/doh-go/provider/google"
-	"github.com/likexian/doh-go/provider/quad9"
+	"github.com/ideatocode/doh-go/provider/cloudflare"
+	"github.com/ideatocode/doh-go/provider/dnspod"
+	"github.com/ideatocode/doh-go/provider/google"
+	"github.com/ideatocode/doh-go/provider/quad9"
 	"github.com/likexian/gokit/xcache"
 	"github.com/likexian/gokit/xhash"
 )
