@@ -1,4 +1,4 @@
-module github.com/likexian/doh-go
+module github.com/ideatocode/doh-go
 
 go 1.12
 
