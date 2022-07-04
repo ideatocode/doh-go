@@ -107,7 +107,12 @@ func (c *Provider) ECSQuery(ctx context.Context, d dns.Domain, t dns.Type, s dns
 		param["edns_client_subnet"] = ss
 	}
 
-	rsp, err := xhttp.New().Get(ctx, Upstream[c.provides], param, xhttp.Header{"accept": "application/dns-json"})
+	req := xhttp.New()
+	if v := ctx.Value("proxyURL"); v != nil {
+		req.SetProxyUrl(v.(string))
+	}
+
+	rsp, err := req.Get(ctx, Upstream[c.provides], param, xhttp.Header{"accept": "application/dns-json"})
 	if err != nil {
 		return nil, err
 	}

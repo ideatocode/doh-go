@@ -111,7 +111,12 @@ func (c *Provider) ECSQuery(ctx context.Context, d dns.Domain, t dns.Type, s dns
 		param["ip"] = ips[0]
 	}
 
-	rsp, err := xhttp.New().Get(ctx, Upstream[c.provides], param)
+	req := xhttp.New()
+	if v := ctx.Value("proxyURL"); v != nil {
+		req.SetProxyUrl(v.(string))
+	}
+
+	rsp, err := req.Get(ctx, Upstream[c.provides], param)
 	if err != nil {
 		return nil, err
 	}
