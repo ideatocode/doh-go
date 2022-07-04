@@ -21,10 +21,11 @@ package google
 
 import (
 	"context"
-	"github.com/likexian/doh-go/dns"
-	"github.com/likexian/gokit/assert"
 	"testing"
 	"time"
+
+	"github.com/ideatocode/doh-go/dns"
+	"github.com/likexian/gokit/assert"
 )
 
 func TestVersion(t *testing.T) {

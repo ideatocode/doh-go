@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/likexian/doh-go/dns"
+	"github.com/ideatocode/doh-go/dns"
 	"github.com/likexian/doh-go/provider/cloudflare"
 	"github.com/likexian/doh-go/provider/dnspod"
 	"github.com/likexian/doh-go/provider/google"
